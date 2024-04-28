@@ -1,10 +1,13 @@
 import LogoSection from "./components/LogoSection";
+import BannerCarousel from "./components/BannerCaroussel";
+import ExamesTable from "./components/ExamesTable";
 
 export default function Home() {
   return (
     <div>
       <LogoSection />
-      <h1>Home</h1>
+      <BannerCarousel />
+      <ExamesTable />
     </div>
   );
 }

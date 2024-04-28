@@ -15,7 +15,7 @@ const colors = {
 
 const LogoSection = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.common.white, // Fundo branco para a seção
-  padding: theme.spacing(2),
+  padding: theme.spacing(2, 2, 2, 2), // Espaçamento interno da seção (8px em todas as direções
   display: 'flex',
   alignItems: 'center',
   borderRadius: theme.shape.borderRadius,
@@ -64,4 +64,3 @@ export default function LogoSectionComponent() {
     </LogoSection>
   );
 }
-
