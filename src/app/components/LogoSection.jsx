@@ -9,46 +9,43 @@ import PhoneIcon from '@mui/icons-material/Phone';
 
 const colors = {
   background: '#e4e4e4',
-  text: '#484848',
-  icon: '#484848',
+  text: '#757575', // Cor do texto cinza claro, ajustado conforme o mockup
+  icon: '#757575', // Cor dos ícones
 };
 
 const LogoSection = styled(Box)(({ theme }) => ({
-  backgroundColor: colors.background,
+  backgroundColor: theme.palette.common.white, // Fundo branco para a seção
   padding: theme.spacing(2),
   display: 'flex',
   alignItems: 'center',
   borderRadius: theme.shape.borderRadius,
 }));
 
-const Logo = styled('div')(({ theme }) => ({
-  backgroundColor: '#acacac',
-  borderRadius: '50%',
+const Logo = styled('div')({
   width: '80px',
   height: '80px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  marginRight: theme.spacing(2),
-}));
+  marginRight: '16px', // Espaçamento à direita da imagem
+});
 
-const StyledLink = styled('a')(({ theme }) => ({
+const StyledLink = styled('a')({
   textDecoration: 'none',
-  color: colors.text,
+  color: colors.text, // Cor do texto cinza claro
   display: 'flex',
   alignItems: 'center',
-  marginRight: theme.spacing(2),
+  marginRight: '16px', // Espaçamento entre os ícones e o texto
   '&:hover': {
     textDecoration: 'none',
   },
-}));
+});
 
 export default function LogoSectionComponent() {
   return (
     <LogoSection>
       <Logo>
-        {/* Logo aqui */}
-        <Typography variant="h6" color="white">+</Typography>
+        <img src="/images/logo.png" alt="Logomarca" style={{ width: '100%', height: 'auto', borderRadius: '50%' }} />
       </Logo>
       <Box>
         <StyledLink href="https://www.google.com/maps/search/?api=1&query=YourAddress" target="_blank" rel="noopener noreferrer">
@@ -67,3 +64,4 @@ export default function LogoSectionComponent() {
     </LogoSection>
   );
 }
+
